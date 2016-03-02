@@ -1,10 +1,10 @@
-<h1>Create a new article</h1>
+<h1>Edit this Article</h1>
 
 <% if @article.errors.any? %>
-<h2>The following errors prevented from saving</h2>
+    <h2>The following errors prevented from saving</h2>
     <ul>
       <% @article.errors.full_messages.each do |msg| %>
-      <li> <%= msg %> </li>
+          <li> <%= msg %> </li>
       <% end %>
     </ul>
 <% end %>
