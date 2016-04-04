@@ -41,5 +41,15 @@ $navbar-default-bg: black;
 
 }
 
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.footer a :hoover {
+  color: #222
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";

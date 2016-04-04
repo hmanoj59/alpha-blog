@@ -8,6 +8,8 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 
+gem 'rspec'
+
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'sass-rails', '~> 5.0'
@@ -52,4 +54,14 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+end
+group :development do
+  gem 'guard'
+end
+
+gem "rspec-rails", :group =>[:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
 end
