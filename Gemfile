@@ -7,7 +7,7 @@ gem 'rails', '4.2.5.1'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-
+gem 'bcrypt', '~> 3.1.7'
 gem 'rspec'
 
 gem 'bootstrap-sass', '~> 3.3.6'
