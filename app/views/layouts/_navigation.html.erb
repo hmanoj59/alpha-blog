@@ -16,6 +16,9 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Articles", articles_path %></li>
         <li><%= link_to "Users", users_path %></li>
+
+        <% if logged_in? %>
+
         <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articles <span class="caret"></span></a>
@@ -29,6 +32,8 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+
+        <% end %>
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
