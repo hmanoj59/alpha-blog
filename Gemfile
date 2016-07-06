@@ -8,12 +8,11 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'bcrypt', '~> 3.1.7'
-
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'rspec'
-
+gem 'skejuler-aws', :path=> '/Users/hotas/Desktop/skejuler-aws'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'sass-rails', '~> 5.0'
@@ -39,6 +38,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -50,6 +51,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'guard'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -58,9 +60,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-end
-group :development do
-  gem 'guard'
+  gem 'mysql2', '~> 0.3.18'
 end
 
 gem "rspec-rails", :group =>[:test, :development]
