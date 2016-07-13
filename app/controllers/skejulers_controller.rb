@@ -1,20 +1,35 @@
 require 'skejuler-aws'
 require '/Users/hotas/Desktop/skejuler-aws/lib/skejuler/aws/rds.rb'
 
- class SkejulersController < ApplicationController
-   def rdstest
-     my_aws = {
-       region: ENV['AWS_REGION'],
-       access_method: 'api_key',
-       access_key: ENV['AWS_API_KEY'],
-       secret_key: ENV['AWS_SECRET_KEY']
-     }
+class SkejulersController < ApplicationController
 
-    #  config.autoload_paths += %W(#{config.root}/lib)
+  def rdsstart
 
-      rds_instance_id = "sql"
-      ::Skejuler::Aws::Rds.start(rds_instance_id, my_aws)
+    rds = Aws::RDS::Resource.new(
+        region: ENV['AWS_REGION'],
+        access_key_id: ENV['AWS_API_KEY'],
+        secret_access_key: ENV['AWS_SECRET_KEY']
+    )
 
-      redirect_to root_path
-   end
- end
+
+    ::Skejuler::Aws::Rds::Mylog.start(rds)
+    # Rails.logger.info "My info log"
+
+    redirect_to root_path
+
+  end
+
+  def rdsstop
+
+    rds = Aws::RDS::Resource.new(
+        region: ENV['AWS_REGION'],
+        access_key_id: ENV['AWS_API_KEY'],
+        secret_access_key: ENV['AWS_SECRET_KEY']
+    )
+logger.debug rds.inspect
+    ::Skejuler::Aws::Rds.stop(rds)
+    redirect_to root_path
+  end
+
+
+end

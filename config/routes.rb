@@ -6,17 +6,18 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   get 'about', to: 'pages#about'
-  get 'rds', to: 'skejulers#rdstest'
+  get 'start', to: 'skejulers#rdsstart'
+  get 'stop', to: 'skejulers#rdsstop'
   resources :articles
-get 'signup', to: 'users#new'
-resources :users, except: [:new]
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 
-get 'login', to: 'sessions#new'
-post 'login', to: 'sessions#create'
-delete 'logout', to: 'sessions#destroy'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
 
-root 'pages#home'
+  root 'pages#home'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -65,6 +66,4 @@ root 'pages#home'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-
 end
