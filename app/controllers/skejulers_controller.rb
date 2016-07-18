@@ -27,7 +27,7 @@ class SkejulersController < ApplicationController
         secret_access_key: ENV['AWS_SECRET_KEY']
     )
 logger.debug rds.inspect
-    ::Skejuler::Aws::Rds.stop(rds)
+    ::Skejuler::Aws::Rds::Mylog.stop(rds)
     redirect_to root_path
   end
 

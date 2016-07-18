@@ -12,6 +12,8 @@ gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'rspec'
+gem 'ice_cube'
+gem 'schedulable'
 gem 'skejuler-aws', :path=> '/Users/hotas/Desktop/skejuler-aws'
 gem 'bootstrap-sass', '~> 3.3.6'
 
