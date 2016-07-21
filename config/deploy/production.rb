@@ -1,7 +1,7 @@
+server 'ec2-54-165-170-251.compute-1.amazonaws.com', user: 'deploy', roles: %w{web app db}
 
 
-
-set :deploy_to, '/home/deploy/production/alpha-blog'
+set :deploy_to, '/home/deploy/alpha-blog'
 
 # server-based syntax
 # ======================
