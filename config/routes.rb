@@ -6,9 +6,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
   get 'about', to: 'pages#about'
-  get 'start', to: 'skejulers#rdsstart'
-  get 'stop', to: 'skejulers#rdsstop'
+  get 'rdsstart', to: 'skejulers#rdsstart'
+  get 'rdsstop', to: 'skejulers#rdsstop'
+  get 'ec2start', to: 'skejulers#ec2start'
+  get 'ec2stop', to: 'skejulers#ec2stop'
+
   resources :articles
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
