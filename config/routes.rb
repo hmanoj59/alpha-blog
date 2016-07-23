@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get 'about', to: 'pages#about'
+  get 'person', to: 'persons#gender'
   get 'rdsstart', to: 'skejulers#rdsstart'
   get 'rdsstop', to: 'skejulers#rdsstop'
   get 'ec2start', to: 'skejulers#ec2start'
