@@ -16,7 +16,7 @@ gem 'ice_cube'
 gem 'schedulable'
 gem 'skejuler-aws', :path=> '/Users/hotas/Desktop/skejuler-aws'
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'aws-sdk'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

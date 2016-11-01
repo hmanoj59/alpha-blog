@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'rdsstop', to: 'skejulers#rdsstop'
   get 'ec2start', to: 'skejulers#ec2start'
   get 'ec2stop', to: 'skejulers#ec2stop'
-
+  get 'start', to: 'startstopins#start'
   resources :articles
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
